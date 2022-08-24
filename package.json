@@ -1,0 +1,26 @@
+{
+  "name": "book_record_management",
+  "version": "1.0.0",
+  "description": "Book record management server build with node.js and expressJs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajat7229/Book_record_management.git"
+  },
+  "author": "Rajat Kumar Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajat7229/Book_record_management/issues"
+  },
+  "homepage": "https://github.com/rajat7229/Book_record_management#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
