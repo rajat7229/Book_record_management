@@ -6,7 +6,7 @@ This is a book record management API Backend for the management of records and b
 
 ## /users
 
-POST: Create a new user 
+POST: Create a new user ✅
 GET: GET all list of users 
 
 ## /users/{id}
