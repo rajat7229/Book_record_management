@@ -3,19 +3,20 @@
 This is a book record management API Backend for the management of records and books
 
 # Routes and Endpoints
+✅: means completed this task
 
 ## /users
 
-POST: Create a new user 
-GET: GET all list of users 
+POST: Create a new user ✅
+GET: GET all list of users ✅
 
 ## /users/{id}
 
 example: /users/1, /users/2
 
-GET: GET a user by id 
+GET: GET a user by id ✅
 
-PUT: Update a user by id 
+PUT: Update a user by id ✅
 
 DELETE: Delete a user by id (check if he/she still has an issued book) (is there any fine to be paid)
 

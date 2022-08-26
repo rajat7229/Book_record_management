@@ -6,10 +6,10 @@
         "surname": "Doe",
         "email": "user@email.com",
         "issuedBook": "1",
-        "issuedDate": "01/07/2023",
-        "returnDate": "02/23/2023",
+        "issuedDate": "01/07/2022",
+        "returnDate": "01/07/2023",
         "subscriptionType": "Premium",
-        "subscriptionDate": "01/07/2023"
+        "subscriptionDate": "01/07/2022"
       },
       {
         "id": "2",
