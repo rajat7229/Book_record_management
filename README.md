@@ -29,19 +29,19 @@ GET: GET user subscription details
 
 ## /books
 
-GET: GET all the books 
+GET: GET all the books ✅
 
 POST: Create/Add a new book 
 
 ## /books/{id}
 
-GET: GET a book by id 
+GET: GET a book by id ✅
 
 PUT: Update a book by id 
 
 ## /books/issued
 
-GET: Get all the issued books 
+GET: Get all the issued books ✅
 
 ## /books/issued/withFine
 GET: Get all the books with fine
