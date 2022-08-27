@@ -56,4 +56,28 @@ router.get("/issued/by-user", (req, res) => {
 
 });
 
+router.post("/", (req, res) => {
+    const {data} = req.body;
+    if (!data){
+        return res.status(404).json({
+        success: false,
+        message: "No data provided"
+    });
+    }
+    const book = books.find((each) => each.id === data.id);
+    if (book) {
+        return res.status(401).json({
+            success: "false",
+            message: "Book exists with this id"
+        });
+    }
+
+    // const allBooks = [...books, data];
+    books.push(data);
+    return res.status(201).json({
+        success: true,
+        data: books           // or allBooks
+    });
+});
+
 module.exports = router;
