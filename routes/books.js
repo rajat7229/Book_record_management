@@ -72,11 +72,37 @@ router.post("/", (req, res) => {
         });
     }
 
-    // const allBooks = [...books, data];
+    // const allBooks = [...books, data];  //instead of push
     books.push(data);
     return res.status(201).json({
         success: true,
         data: books           // or allBooks
+    });
+});
+
+router.put("/:id", (req, res) => {
+    const {id} = req.params;
+    const {data} = req.body;
+
+    const book = books.find((each) => each.id === id);
+
+    if(!book) {
+        return res.status(400).json({
+            success: false,
+            message: "book not found with this id"
+        });
+    }
+
+    const updatedData = books.map((each) => {
+        if (each.id === id) {
+            return {...each, ...data};
+        }
+        return each;
+    });
+
+    return res.status(200).json({
+        success: true,
+        data: updatedData
     });
 });
 
