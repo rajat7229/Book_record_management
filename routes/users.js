@@ -90,6 +90,40 @@ router.delete("/:id", (req, res) => {
         });
     }
 
+    if (user.issuedBook) {
+
+        const getDateInDays = (data = "") => {
+            let date;
+            if (data === "") {
+                date = new Date();
+            } else {
+                date = new Date(data);
+            }
+            let days = Math.floor(date / (1000 * 60 * 60 * 24)); //1000 is for milliseconds
+            return days;
+        };
+
+        let returnDate = getDateInDays(user.returnDate);
+        let currentDate = getDateInDays();
+        let subscriptionDate = getDateInDays(user.subscriptionDate);
+        let subscriptionExpiration = subscriptionType(subscriptionDate);
+
+
+        const data = {
+            ...user,
+            fine: returnDate < currentDate ? 
+            subscriptionExpiration <= currentDate 
+            ? 200
+            :100
+            :0
+        }
+
+        return res.status(201).json({
+            Success: false,
+            Message: "User can't be deleted until user have issued books and fine",
+            Data: data
+        });
+    } else {
     const index = users.indexOf(user);
     users.splice(index, 1);
 
@@ -97,6 +131,7 @@ router.delete("/:id", (req, res) => {
         success: true,
         data: users
     });
+}
 
 });
 
