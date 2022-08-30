@@ -103,6 +103,18 @@ router.delete("/:id", (req, res) => {
             return days;
         };
 
+        const subscriptionType = (date) => {
+            if (user.subscriptionType === "Basic"){
+                date = date + 90;
+            } else if (user.subscriptionType === "Standard"){
+                date = date + 180;
+            } else if (user.subscriptionType === "Premium"){
+                date = date + 365;
+            }
+    
+            return date;
+        };
+
         let returnDate = getDateInDays(user.returnDate);
         let currentDate = getDateInDays();
         let subscriptionDate = getDateInDays(user.subscriptionDate);
