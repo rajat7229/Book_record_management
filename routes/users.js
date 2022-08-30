@@ -130,7 +130,7 @@ router.delete("/:id", (req, res) => {
             :0
         }
 
-        return res.status(201).json({
+        return res.status(400).json({
             Success: false,
             Message: "User can't be deleted until user have issued books and fine",
             Data: data

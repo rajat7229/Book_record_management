@@ -18,7 +18,7 @@ router.get("/:id", (req, res) => {
 
     if(!book) {
         return res.status(404).json({
-            success: true,
+            success: false,
             message: "Book not found"
         });
     }
