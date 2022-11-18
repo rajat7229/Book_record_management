@@ -2,6 +2,9 @@
 
 This is a book record management API Backend for the management of records and books
 
+# API Documentation link: 
+https://documenter.getpostman.com/view/23030920/VUr1GCTH
+
 # Routes and Endpoints
 ✅: means completed this task
 
@@ -68,5 +71,3 @@ and he missed the date of return, then he gets a fine of Rs. 100/-
 If he has issued book and the issued is to be returned at 01/01/23
 if he missed the date of return, and his subscription also expires, then he will get a fine of Rs. 200/-
 
-# API Documentation link: 
-https://documenter.getpostman.com/view/23030920/VUr1GCTH
